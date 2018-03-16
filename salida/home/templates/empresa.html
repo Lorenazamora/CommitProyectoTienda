@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>POESIA</title>
+	<style type="text/css">
+	body {  background-image: url(http://www.revistaestante.fnac.pt/wp-content/uploads/2017/11/poesia-revista-estante-fnac.jpg); font-style:italic; Verdana; }
+	header {color:#424242; font-style:italic; font-size:25px;}
+	a {color:#050606; font-size:29px; }
+
+	img {
+		width: 450px;
+		height:450px;
+	}
+
+	</style>
+</head>
+<body>
+	<header>
+		<center><h1>POESIA</h1></center>
+
+	</header>
+	<section>
+		<a href="{% url 'vista_contactos' %}">POETAS</a>
+		<a href="{% url 'vista_about' %}">DATOS PERSONALES</a>
+		<a href="{% url 'vista_hobbit' %}">LIBROS</a>
+		
+		
+		
+		{% for i in nombre %}
+		<p> {{ i }}</p>
+		{% endfor %}
+
+
+	</section>
+	<section>
+		
+
+	<img src="http://3.bp.blogspot.com/-JJ4lTrUAFpw/Uq7m8kj1FGI/AAAAAAAABJY/C9No8K9Aqkw/s1600/poesia.gif">
+	</section>
+
+</body>
+</html>

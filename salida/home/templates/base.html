@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+<head>
+	<title>{% block titulo %}{% endblock%}
+	</title>
+	<link rel="stylesheet" href="{% static 'css/about.css' %}">
+	<style type="text/css">
+		#navegador li{
+  			display: inline;
+   			text-align: center;
+   			margin: 2%;
+		}
+	</style>
+</head> 
+<body>
+
+	<div id="navegador">
+		<ul>
+  			<li><a href="{% url 'vista_about' %}">About</a></li>
+  			<li><a href="{% url 'vista_contactos' %}">Contactos</a></li>
+  			
+  			
+		</ul>
+	</div>
+	<section>
+		<a href="{% url 'vista_empresa' %}">POESIA</a>
+		<a href="{% url 'vista_contactos' %}">POETAS</a>
+		<a href="{% url 'vista_hobbit' %}">LIBROS</a>
+		<br/>
+		<br/>
+
+
+		<a href="{% url 'vista_lista_producto' %}">Productos</a>
+		<br/>
+			<a href="{% url 'vista_agregar_producto' %}">Agregar Productos</a>
+			<br/>
+		<a href="{% url 'vista_lista_marca' %}">Marcas</a>
+			
+		<br/>
+		<a href="{% url 'vista_lista_categoria' %}">Categorias</a>
+
+
+
+
+
+
+
+	</section>
+	{% block contenido %}
+	{% endblock %}
+</body>
+</html>
